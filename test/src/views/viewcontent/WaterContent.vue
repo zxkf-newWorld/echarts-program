@@ -1,14 +1,14 @@
 <template>
-  <div class="content">
+  <div class="watercontent">
     <div class="container">
       <div class="row w-100 h-100">
-        <header class=" col-md-3 col-md-12">
+        <header class=" col-md-3 col-sm-12 col-xs-12">
           <ContentLeft />
         </header>
-        <section class=" col-md-6 col-md-12">
+        <section class=" col-md-6 col-sm-12 col-xs-12">
           <ContentMiddle />
         </section>
-        <footer class=" col-md-3 col-md-12">
+        <footer class=" col-md-3 col-sm-12 col-xs-12">
           <ContentRight />
         </footer>
       </div>
@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import ContentLeft from './ContentLeft';
-import ContentRight from './ContentRight';
-import ContentMiddle from './ContentMiddle';
+import ContentLeft from "./ContentLeft";
+import ContentRight from "./ContentRight";
+import ContentMiddle from "./ContentMiddle";
 export default {
-  name: 'content',
+  name: "watercontent",
   data() {
     return {};
   },
@@ -34,10 +34,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content {
+.watercontent {
   width: 100%;
-  height: 400px;
-  // border: 1px solid #ccc;
+  height: 100%;
 }
 .container {
   width: 100%;
@@ -53,5 +52,10 @@ export default {
 .row {
   margin: 0;
   padding: 0;
+}
+header,
+section,
+footer {
+  height: 100%;
 }
 </style>

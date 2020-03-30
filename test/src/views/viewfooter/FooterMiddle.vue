@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'footermiddle'
+  name: "footermiddle"
 };
 </script>
 
@@ -18,8 +18,14 @@ export default {
 }
 .footer-main-top,
 .footer-main-bottom {
-  width: 49%;
-  height: 180px;
+  width: 50%;
+  height: 100%;
   border: 1px solid #000;
+}
+.footer-main-top {
+  margin-right: 2px;
+}
+.footer-main-bottom {
+  margin-left: 2px;
 }
 </style>

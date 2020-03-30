@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'footerleft'
+  name: "footerleft"
 };
 </script>
 
@@ -19,7 +19,7 @@ export default {
 .top-clock,
 .bottom-clock {
   width: 100%;
-  height: 90px;
+  height: 50%;
   padding-top: 10px;
   border: 1px solid #000;
 }

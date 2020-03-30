@@ -11,14 +11,14 @@
 
 <script>
 export default {
-  name: 'contentright'
+  name: "contentright"
 };
 </script>
 
 <style lang="scss" scoped>
 .contentright {
   width: 100%;
-  height: 400px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,7 +26,7 @@ export default {
 .top-colum,
 .bottom-colum {
   width: 100%;
-  height: 190px;
+  height: 50%;
   padding-top: 10px;
   border: 1px solid #000;
 }

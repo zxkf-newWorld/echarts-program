@@ -1,48 +1,52 @@
 <template>
   <div id="app">
-    <Header />
-    <Content />
-    <Middle />
+    <WaterHead class="height-header"></WaterHead>
+    <WaterContent class="height-content"></WaterContent>
+    <WaterFooter class="height-footer"></WaterFooter>
     <!-- <Test /> -->
     <!-- <router-view></router-view> -->
   </div>
 </template>
 <script>
 // import Test from './views/Test';
-import Header from './views/Header';
-import Content from './views/viewcontent/Content';
-import Middle from './views/viewfooter/Footer';
+import WaterHead from "./views/WaterHead";
+import WaterContent from "./views/viewcontent/WaterContent";
+import WaterFooter from "./views/viewfooter/WaterFooter";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    // Test,
-    Header,
-    Content,
-    Middle
+    WaterHead,
+    WaterContent,
+    WaterFooter
   }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  width: 100%;
+  height: 100%;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.height-header,
+.height-content,
+.height-footer {
+  width: 100%;
+  padding-bottom: 4px;
+}
+.height-header {
+  height: 5%;
+}
+.height-content {
+  height: 60%;
+}
+.height-footer {
+  padding-bottom: 0;
+  height: 35%;
 }
 </style>

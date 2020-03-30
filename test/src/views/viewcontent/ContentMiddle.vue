@@ -8,18 +8,18 @@
 
 <script>
 export default {
-  name: 'contentmiddle'
+  name: "contentmiddle"
 };
 </script>
 
 <style lang="scss" scoped>
 .contentmiddle {
   width: 100%;
-  height: 380px;
+  height: 100%;
 }
 .main {
   width: 100%;
-  height: 380px;
+  height: 100%;
   border: 1px solid #000;
 }
 </style>

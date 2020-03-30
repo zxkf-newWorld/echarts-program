@@ -8,13 +8,13 @@
 
 <script>
 export default {
-  name: 'footerright'
+  name: "footerright"
 };
 </script>
 <style lang="scss" scoped>
 .main {
   width: 100%;
-  height: 180px;
+  height: 100%;
   border: 1px solid #000;
 }
 </style>
