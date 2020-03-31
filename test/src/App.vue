@@ -3,18 +3,17 @@
     <WaterHead class="height-header"></WaterHead>
     <WaterContent class="height-content"></WaterContent>
     <WaterFooter class="height-footer"></WaterFooter>
-    <!-- <Test /> -->
     <!-- <router-view></router-view> -->
   </div>
 </template>
 <script>
 // import Test from './views/Test';
-import WaterHead from "./views/WaterHead";
-import WaterContent from "./views/viewcontent/WaterContent";
-import WaterFooter from "./views/viewfooter/WaterFooter";
+import WaterHead from './views/WaterHead';
+import WaterContent from './views/viewcontent/WaterContent';
+import WaterFooter from './views/viewfooter/WaterFooter';
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
     WaterHead,
     WaterContent,

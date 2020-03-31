@@ -113,6 +113,9 @@ footer {
   }
   & div.switch-button {
     right: 1%;
+    & img {
+      height: 100%;
+    }
   }
 }
 </style>

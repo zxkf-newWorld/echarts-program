@@ -1,14 +1,18 @@
 <template>
   <div class="contentmiddle">
     <div class="main">
-      contentmiddle 组件
+      <BsMap />
     </div>
   </div>
 </template>
 
 <script>
+import BsMap from '../../components/echarts/BsMap';
 export default {
-  name: "contentmiddle"
+  name: 'contentmiddle',
+  components: {
+    BsMap
+  }
 };
 </script>
 
