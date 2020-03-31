@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import FooterLeft from './FooterLeft';
-import FooterRight from './FooterRight';
-import FooterMiddle from './FooterMiddle';
+import FooterLeft from "./FooterLeft";
+import FooterRight from "./FooterRight";
+import FooterMiddle from "./FooterMiddle";
 export default {
-  name: 'waterfooter',
+  name: "waterfooter",
   data() {
     return {};
   },
@@ -58,10 +58,10 @@ footer {
   height: 100%;
 }
 header {
-  padding-right: 1px;
+  // padding-right: 1px;
 }
 section {
-  padding: 0 2px;
+  // padding: 0 2px;
 }
 footer {
   padding-right: 1px;

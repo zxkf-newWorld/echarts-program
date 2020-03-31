@@ -2,7 +2,6 @@
   <div class="contentleft">
     <div class="top-clock">
       <c-header :title="title1" class="cheader"></c-header>
-      <div id="chart1" style="{width: 100%; height: 100%;}"></div>
     </div>
     <div class="bottom-clock">
       <c-header :title="title2" class="cheader"></c-header>
@@ -19,7 +18,15 @@
           </div>
           <div class="top-right">
             <assets-header-right class="header-right"></assets-header-right>
-            <div class="assets-content"></div>
+            <div class="assets-content">
+              <!-- 仪表盘 -->
+              <div class="espanel">
+                <EsPanel />
+              </div>
+              <div class="espanel">
+                <EsPanel2 />
+              </div>
+            </div>
           </div>
         </div>
         <div class="assets-bottom">
@@ -34,7 +41,15 @@
           </div>
           <div class="top-right">
             <assets-header-right class="header-right"></assets-header-right>
-            <div class="assets-content"></div>
+            <div class="assets-content">
+              <!-- 仪表盘 -->
+              <div class="espanel">
+                <EsPanel />
+              </div>
+              <div class="espanel">
+                <EsPanel2 />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -43,25 +58,27 @@
 </template>
 
 <script>
-import CHeader from '../../components/CHeader';
-import AssetsHeaderLeft from '../../components/AssetsHeaderLeft';
-import AssetsHeaderRight from '../../components/AssetsHeaderRight';
-import AssetsValue from '../../components/AssetsValue';
+import CHeader from "../../components/CHeader";
+import AssetsHeaderLeft from "../../components/AssetsHeaderLeft";
+import AssetsHeaderRight from "../../components/AssetsHeaderRight";
+import AssetsValue from "../../components/AssetsValue";
+import EsPanel from "../../components/echarts/EsPanel";
+import EsPanel2 from "../../components/echarts/EsPanel2";
 export default {
-  name: 'contentleft',
+  name: "contentleft",
   data() {
     return {
-      title1: '盈利能力',
-      title2: '成长能力',
-      title3: '总资产增长率',
-      title4: '净负债比率',
+      title1: "盈利能力",
+      title2: "成长能力",
+      title3: "总资产增长率",
+      title4: "净负债比率",
       assets1: {
-        lastvalue: '324.567',
-        recentlyvalue: '324.567'
+        lastvalue: "324.567",
+        recentlyvalue: "324.567"
       },
       assets2: {
-        lastvalue: '324.567',
-        recentlyvalue: '324.567'
+        lastvalue: "324.567",
+        recentlyvalue: "324.567"
       }
     };
   },
@@ -69,73 +86,12 @@ export default {
     CHeader,
     AssetsHeaderLeft,
     AssetsHeaderRight,
-    AssetsValue
+    AssetsValue,
+    EsPanel,
+    EsPanel2
   },
-  mounted() {
-    this.drawLine();
-  },
-  methods: {
-    drawLine() {
-      // 基于准备好的dom，初始化echarts实例
-      let myChart = this.$echarts.init(document.getElementById('chart1'));
-      // 绘制图表
-      myChart.setOption({
-        // tooltip: {
-        //   formatter: "{a} <br/>{b} : {c}%"
-        // },
-        // toolbox: {
-        //   feature: {
-        //     restore: {},
-        //     saveAsImage: {}
-        //   }
-        // },
-        series: [
-          {
-            name: '业务指标',
-            type: 'gauge',
-            detail: { formatter: '{value}%' },
-            data: [{ value: 50, name: '完成率' }],
-            radius: '50%',
-            startAngle: 180,
-            endAngle: 0,
-            splitNumber: 5,
-            axisLine: {
-              show: true,
-              lineStyle: {
-                width: 10,
-                shadowColor: 'rgba(0, 0, 0, 0.5)',
-                shadowBlur: 20
-              }
-            },
-            splitLine: {
-              show: false, //分割线
-              length: 24
-            },
-            axisLabel: {
-              show: true,
-              distance: 2
-            },
-            pointer: {
-              width: 4,
-              length: '80%',
-              color: 'auto'
-            },
-            emphasis: {
-              itemStyle: {
-                color: {
-                  type: 'linear',
-                  x: 0,
-                  y: 0,
-                  x2: 24,
-                  y2: 6
-                }
-              }
-            }
-          }
-        ]
-      });
-    }
-  }
+  mounted() {},
+  methods: {}
 };
 </script>
 
@@ -152,13 +108,13 @@ export default {
   flex: 1;
   width: 100%;
   height: 50%;
-  border: 1px solid #000;
+  // border: 1px solid #000;
 }
 .bottom-clock {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #080b0e;
+  background: #2e2f2f;
   & .cheader {
     height: 14%;
   }
@@ -193,7 +149,18 @@ export default {
       height: 24%;
     }
     & .assets-content {
-      background: #ffffff;
+      background: #2e2f2f;
+      width: 100%;
+      height: 80%;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      & div {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        // border: 1px solid #000;
+      }
     }
   }
 }

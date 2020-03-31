@@ -15,17 +15,17 @@
 </template>
 
 <script>
-import CHeader from '../../components/CHeader';
-import LineShape from '../../components/echarts/Lines';
-import Bars from '../../components/echarts/Bars';
+import CHeader from "../../components/CHeader";
+import LineShape from "../../components/echarts/Lines";
+import Bars from "../../components/echarts/Bars";
 export default {
-  name: 'footermiddle',
+  name: "footermiddle",
   data() {
     return {
-      title: '水厂综合能力',
+      title: "水厂综合能力",
       custom: {
-        danwei: '万元',
-        color: '#256992'
+        danwei: "万元",
+        color: "#256992"
       }
     };
   },
@@ -43,6 +43,7 @@ export default {
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
+  background: #3f4141;
 }
 .top {
   height: 14%;
@@ -58,7 +59,7 @@ export default {
   width: 50%;
   height: 100%;
   padding: 2%;
-  border: 1px solid #000;
+  // border: 1px solid #000;
 }
 .footer-main-top {
   // background: #2C2C2C;

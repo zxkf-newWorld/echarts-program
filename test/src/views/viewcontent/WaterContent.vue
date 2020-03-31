@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import ContentLeft from './ContentLeft';
-import ContentRight from './ContentRight';
-import ContentMiddle from './ContentMiddle';
+import ContentLeft from "./ContentLeft";
+import ContentRight from "./ContentRight";
+import ContentMiddle from "./ContentMiddle";
 export default {
-  name: 'watercontent',
+  name: "watercontent",
   data() {
     return {};
   },
@@ -37,6 +37,7 @@ export default {
 .watercontent {
   width: 100%;
   height: 100%;
+  padding: 0 !important;
 }
 .container {
   width: 100%;

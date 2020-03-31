@@ -1,6 +1,5 @@
 <template>
   <div class="assets-header-right">
-    right
   </div>
 </template>
 

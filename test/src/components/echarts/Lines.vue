@@ -6,75 +6,92 @@
 
 <script>
 export default {
-  name: 'lines',
+  name: "lines",
   data() {
     return {
       options: {
         tooltip: {},
         legend: {
           show: true,
-          orient: 'horizontal',
-          x: 'right',
-          y: 'top',
+          orient: "horizontal",
+          x: "right",
+          y: "top",
+          textStyle: {
+            color: "#fff"
+          },
           data: [
             {
-              name: '实际生产水量',
+              name: "实际生产水量",
               textStyle: {
                 fontSize: 8,
-                fontWeight: 'bolder'
+                fontWeight: "bolder"
               },
-              icon: 'roundRect'
+              icon: "roundRect"
             },
             {
-              name: '应收费水量',
+              name: "应收费水量",
               textStyle: {
                 fontSize: 8,
-                fontWeight: 'bolder'
+                fontWeight: "bolder"
               },
-              icon: 'roundRect'
+              icon: "roundRect"
             }
           ]
         },
         title: {
-          text: '生产量'
+          text: "生产量",
+          textStyle: { color: "#ffffff" }
         },
         grid: {
-          show: 'true',
-          borderWidth: '0',
-          height: '40%',
-          width: '90%',
-          y: '40%',
-          x: '12%'
+          show: "true",
+          borderWidth: "0",
+          height: "40%",
+          width: "90%",
+          y: "40%",
+          x: "12%"
         },
         xAxis: {
-          type: 'category',
-          data: ['1月', '2月', '3月', '4月', '5月', '6月'],
+          type: "category",
+          data: ["1月", "2月", "3月", "4月", "5月", "6月"],
           axisLabel: {
             show: true,
-            rotate: 38
+            rotate: 38,
+            textStyle: { color: "#fff" }
           }
           // axisLine: false
         },
 
         yAxis: {
-          name: '万吨',
-          type: 'value',
+          name: "万吨",
+          type: "value",
           splitLine: {
             lineStyle: {
-              type: 'dashed'
+              type: "dashed"
+            }
+          },
+          // axisLabel: {
+          //   show: true,
+          //   color: "#fffffff",
+          //   lineStyle: {
+          //     color: "#ffffff"
+          //   }
+          // },
+          axisLine: {
+            lineStyle: {
+              color: "#fff"
             }
           }
         },
         series: [
           {
-            name: '实际生产水量',
+            name: "实际生产水量",
             data: [820, 932, 901, 934, 1290, 1330],
-            type: 'line'
+            type: "line"
           },
           {
-            name: '应收费水量',
+            name: "应收费水量",
             data: [420, 532, 701, 934, 1090, 1000],
-            type: 'line'
+            type: "line"
           }
         ]
       }

@@ -2,8 +2,9 @@
   <div class="cheader">
     <div class="logo-left">
       <img src="../assets/images/c-header-leftlogo.png" alt="logo-left" />
+      <span>{{ title }}</span>
     </div>
-    <div class="title-middle">{{ title }}</div>
+    <div class="title-middle"></div>
     <div class="logo-right">
       <img src="../assets/images/c-header-rightlogo.png" alt="logo-right" />
     </div>
@@ -12,11 +13,11 @@
 
 <script>
 export default {
-  name: 'cheader',
+  name: "cheader",
   data() {
     return {};
   },
-  props: ['title']
+  props: ["title"]
 };
 </script>
 
@@ -34,6 +35,12 @@ export default {
     & img {
       height: 100%;
     }
+    & span {
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      padding-left: 10%;
+    }
   }
   & .logo-left,
   & .logo-right,
@@ -41,17 +48,20 @@ export default {
     // flex: 1;
   }
   & .logo-left {
+    flex: 1;
     text-align: left;
+    padding-left: 2px;
   }
   & .logo-right {
-    margin-right: 2px;
+    padding-right: 6%;
     // position: absolute;
     // right: 2px;
   }
   & .title-middle {
-    color: #ffffff;
-    vertical-align: center;
+    height: 100%;
+    line-height: 100%;
     text-align: left;
+    color: #ffffff;
   }
 }
 </style>

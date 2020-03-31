@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import BsMap from '../../components/echarts/BsMap';
+import BsMap from "../../components/echarts/BsMap";
 export default {
-  name: 'contentmiddle',
+  name: "contentmiddle",
   components: {
     BsMap
   }
@@ -24,6 +24,6 @@ export default {
 .main {
   width: 100%;
   height: 100%;
-  border: 1px solid #000;
+  // border: 1px solid #000;
 }
 </style>
