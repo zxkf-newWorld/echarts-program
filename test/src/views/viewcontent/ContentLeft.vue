@@ -2,6 +2,7 @@
   <div class="contentleft">
     <div class="top-clock">
       <c-header :title="title1" class="cheader"></c-header>
+      <ContentLeftTop class="content-left-top" />
     </div>
     <div class="bottom-clock">
       <c-header :title="title2" class="cheader"></c-header>
@@ -58,27 +59,28 @@
 </template>
 
 <script>
-import CHeader from "../../components/CHeader";
-import AssetsHeaderLeft from "../../components/AssetsHeaderLeft";
-import AssetsHeaderRight from "../../components/AssetsHeaderRight";
-import AssetsValue from "../../components/AssetsValue";
-import EsPanel from "../../components/echarts/EsPanel";
-import EsPanel2 from "../../components/echarts/EsPanel2";
+import CHeader from '../../components/CHeader';
+import AssetsHeaderLeft from '../../components/AssetsHeaderLeft';
+import AssetsHeaderRight from '../../components/AssetsHeaderRight';
+import AssetsValue from '../../components/AssetsValue';
+import EsPanel from '../../components/echarts/EsPanel';
+import EsPanel2 from '../../components/echarts/EsPanel2';
+import ContentLeftTop from './ContentLeftTop';
 export default {
-  name: "contentleft",
+  name: 'contentleft',
   data() {
     return {
-      title1: "盈利能力",
-      title2: "成长能力",
-      title3: "总资产增长率",
-      title4: "净负债比率",
+      title1: '盈利能力',
+      title2: '成长能力',
+      title3: '总资产增长率',
+      title4: '净负债比率',
       assets1: {
-        lastvalue: "324.567",
-        recentlyvalue: "324.567"
+        lastvalue: '324.567',
+        recentlyvalue: '324.567'
       },
       assets2: {
-        lastvalue: "324.567",
-        recentlyvalue: "324.567"
+        lastvalue: '324.567',
+        recentlyvalue: '324.567'
       }
     };
   },
@@ -88,7 +90,8 @@ export default {
     AssetsHeaderRight,
     AssetsValue,
     EsPanel,
-    EsPanel2
+    EsPanel2,
+    ContentLeftTop
   },
   mounted() {},
   methods: {}
@@ -109,6 +112,9 @@ export default {
   width: 100%;
   height: 50%;
   // border: 1px solid #000;
+}
+.top-clock {
+  background: #2e2f2f;
 }
 .bottom-clock {
   display: flex;
@@ -172,5 +178,8 @@ export default {
   height: 76%;
   padding-top: 10%;
   background: #283b43;
+}
+.content-left-top {
+  height: 88%;
 }
 </style>

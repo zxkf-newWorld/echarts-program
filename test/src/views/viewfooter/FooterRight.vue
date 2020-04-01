@@ -8,13 +8,13 @@
 </template>
 
 <script>
-import CHeader from "../../components/CHeader";
-import Scatters from "../../components/echarts/Scatters";
+import CHeader from '../../components/CHeader';
+import Scatters from '../../components/echarts/Scatters';
 export default {
-  name: "footerright",
+  name: 'footerright',
   data() {
     return {
-      title: "板块业务增长"
+      title: '板块业务增长'
     };
   },
   components: {
@@ -27,7 +27,7 @@ export default {
 .main {
   width: 100%;
   height: 100%;
-  background: #393A3B;
+  background: #393a3b;
   // border: 1px solid #000;
 }
 .cheader {

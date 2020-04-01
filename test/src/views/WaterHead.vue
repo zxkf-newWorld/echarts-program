@@ -5,7 +5,7 @@
         <div class="header-left col-lg-3 col-md-2 col-sm-12 col-xs-12">
           <img src="../assets/images/first.gif" alt="首页" />
         </div>
-        <div class="header-logo col-lg-5 col-md-6 col-sm-12 col-xs-12">
+        <div class="header-logo col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <div class="logo-left">
             <img src="../assets/images/logo.png" alt="logo" />
           </div>
@@ -13,9 +13,11 @@
             <img src="../assets/images/title.gif" alt="标题" />
           </div>
         </div>
-        <div class="header-right col-lg-4 col-md-4 col-sm-12 col-xs-12">
-          <div class="timer">timer</div>
-          <div class="time-count">time-count</div>
+        <div class="header-right col-lg-3 col-md-4 col-sm-12 col-xs-12">
+          <div class="timer-control"><TimerPicker /></div>
+          <div class="timer"><TimeControl /></div>
+          <!-- <div class="timer">timer</div>
+          <div class="time-count"><TimeControl /></div> -->
           <div class="switch-button">
             <img src="../assets/images/switch.gif" alt="开关按钮" />
           </div>
@@ -26,10 +28,16 @@
 </template>
 
 <script>
+import TimeControl from '../components/date-control/DateControl';
+import TimerPicker from '../components/date-control/TimerControl';
 export default {
-  name: "waterheader",
+  name: 'waterheader',
   data() {
     return {};
+  },
+  components: {
+    TimeControl,
+    TimerPicker
   }
 };
 </script>
@@ -54,7 +62,7 @@ footer {
     height: 100%;
   }
   & .row div {
-    border: 1px solid #000;
+    // border: 1px solid #000;
   }
 }
 .row {
@@ -101,13 +109,20 @@ footer {
   // }
 }
 .header-right {
-  // display: flex;
+  display: flex;
+  padding: 0;
+  & div.timer-control {
+    // 日期时间选择
+    flex: 4;
+    width: 100%;
+  }
   & div.timer,
-  & div.time-count,
   & div.switch-button {
-    position: absolute;
+    // position: absolute;
+    flex: 1;
   }
   & div.timer {
+    flex: 3;
   }
   & div.time-count {
   }

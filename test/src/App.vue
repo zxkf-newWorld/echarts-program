@@ -14,10 +14,33 @@ import WaterFooter from './views/viewfooter/WaterFooter';
 
 export default {
   name: 'app',
+  data() {
+    return {
+      screenWidht: document.body.clientWidth,
+      screenHeight: document.body.clientHeight
+    };
+  },
+  mounted() {
+    // 页面窗口监听
+    window.onresize = () => {
+      console.log('我不是随便的');
+      location.reload();
+    };
+  },
   components: {
     WaterHead,
     WaterContent,
     WaterFooter
+  },
+  watch: {
+    screenHeight(newVal, oldVal) {
+      if (newVal !== oldVal) location.reload();
+      console.log('页面宽度变化');
+    },
+    screenWidht(newVal, oldVal) {
+      console.log(newVal, oldVal);
+      if (newVal !== oldVal) location.reload();
+    }
   }
 };
 </script>

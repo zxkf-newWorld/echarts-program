@@ -16,9 +16,28 @@ export default {
         tooltip: {
           show: true
         },
+        markLine: {
+          type: 'line',
+          symbol: 'none',
+          label: {
+            show: false
+          },
+          data: [
+            {
+              lineStyle: {
+                width: 2,
+                type: 'solid',
+                color: 'red',
+                shadowColor: 'red',
+                shadowBlur: 20
+              },
+              yAxis: 100
+            }
+          ]
+        },
         title: {
           text: '吨水生产成本排名',
-          textStyle: { color: '#ffffff' }
+          textStyle: { color: '#ffffff', fontSize: 15 }
         },
         grid: {
           show: 'true',
@@ -74,27 +93,8 @@ export default {
           {
             name: '实际生产水量',
             data: [0, 50, 100, 150, 200, 250, 300],
-            type: 'bar',
+            type: 'bar'
             // 标线
-            makeLine: {
-              symbol: ['none', 'none'], //去掉箭头
-              itemStyle: {
-                normal: {
-                  lineStyle: { type: 'solid', color: 'blue' },
-                  label: { show: true, position: 'left' }
-                }
-              },
-              data: [
-                {
-                  name: 'Y 轴值为 100 的水平线',
-                  yAxis: 7.24
-                },
-                [
-                  { name: '标线1起点', value: 10, x: 0, y: 150 },
-                  { name: '标线1终点', x: 0, y: 150 }
-                ]
-              ]
-            }
           }
         ]
       }
